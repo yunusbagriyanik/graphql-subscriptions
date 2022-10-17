@@ -1,0 +1,19 @@
+type Query {
+    widgets: [Widget]
+    widgetById(id: Int): Widget
+}
+
+type Mutation {
+    createWidget(request: CreateWidget): Widget
+    deleteWidget: String
+}
+
+input CreateWidget {
+    id: ID
+    name: String
+}
+
+type Widget {
+    id: ID
+    name: String
+}

@@ -1,0 +1,17 @@
+scalar JSON
+
+type Subscription {
+    widgetEvents: WidgetEvent
+}
+
+type WidgetEvent {
+    id: ID!
+    data: JSON
+    action: Action
+}
+
+enum Action {
+    CREATED
+    UPDATED
+    DELETED
+}
